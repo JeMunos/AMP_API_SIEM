@@ -1,5 +1,5 @@
-CLIENT_ID = 'd3c0559802a9f7e56fd3'
-API_KEY = '5d407c94-ab88-4913-b4b8-3487fa1615f2'
+CLIENT_ID = '<CLIENT_ID>'
+API_KEY = '<API_KEY>'
 API_SERVER = "https://api.amp.cisco.com/v1/event_streams"
 RMQ_QUEUE = "amp_event_data"
 RMQ_SERVER = "localhost"
