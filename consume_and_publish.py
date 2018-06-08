@@ -54,11 +54,11 @@ def on_message(channel, method_frame, header_frame, body):
 cloud_channel.basic_consume(on_message, event_stream['amqp_credentials']['queue_name'], no_ack=True)
 try:
     cloud_channel.start_consuming()
+    print(" [*] Connecting to:\t%r" % cloud_queue_url)
+    print(" [*] Waiting for messages. To exit press CTRL+C")
 except KeyboardInterrupt:
     cloud_channel.stop_consuming()
-cloud_connection.close()
+    cloud_channel.close()
 
 
-print(" [*] Connecting to:\t%r" % cloud_queue_url)
-print(" [*] Waiting for messages. To exit press CTRL+C")
-cloud_channel.start_consuming()
+
